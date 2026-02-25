@@ -1,4 +1,4 @@
-package stepsdefinitions;
+package tests;
 
 import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
@@ -8,9 +8,9 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 
-import pageobjects.AddCustomerPage;
-import pageobjects.LoginPage;
-import testbase.BaseClass;
+import pages.AddCustomerPage;
+import pages.LoginPage;
+import base.BaseClass;
 
 import org.apache.logging.log4j.LogManager;  //Log4j
 

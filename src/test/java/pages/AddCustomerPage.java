@@ -1,10 +1,12 @@
-package pageobjects;
+package pages;
 
+import base.BaseClass;
+import base.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class AddCustomerPage extends BasePage{
+public class AddCustomerPage extends BasePage {
 
     public AddCustomerPage(WebDriver driver) {
         super(driver);

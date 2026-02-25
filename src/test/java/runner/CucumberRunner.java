@@ -1,4 +1,4 @@
-package testrunner;
+package runner;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
@@ -6,7 +6,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions
         (
                 features = ".//features/Login.feature",
-                glue = "stepsdefinitions",
+                glue = "tests",
                 dryRun = false,
                 monochrome = true,
                 plugin = {"pretty", "html:test-output"}

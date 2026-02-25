@@ -1,8 +1,8 @@
-package pageobjects;
+package base;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
-import utilities.WaitHelper;
+import utils.WaitHelper;
 
 public class BasePage {
 
