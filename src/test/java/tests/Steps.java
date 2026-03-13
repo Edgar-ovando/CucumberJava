@@ -23,49 +23,11 @@ import java.util.Properties;
 public class Steps extends BaseClass {
 
     @Before
-    public void setUp() throws IOException
+    public void setUpBrowser() throws IOException
     {
-        //Read config.properties file
-        FileReader file = new FileReader("./src//test//resources//config.properties");
-        p = new Properties();
-        p.load(file);
-
-        // Log4J2
-        logger = LogManager.getLogger(this.getClass());
-        logger.info("Launching Chrome browser");
-
-        //Browser
-        String browser = p.getProperty("browser");
-
-
-        switch (browser.toLowerCase())
-        {
-            case "chrome":
-                WebDriverManager.chromedriver().setup();
-                driver = new ChromeDriver();
-                break;
-
-            case "firefox":
-                //WebDriverManager.firefoxdriver().setup();
-                driver = new FirefoxDriver();
-                break;
-
-            case "edge":
-                //WebDriverManager.edgedriver().setup();
-                driver = new EdgeDriver();
-                break;
-
-            default:
-                throw new RuntimeException("Browser not supported: " + browser);
-        }
-
-        driver.manage().deleteAllCookies();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.manage().window().maximize();
-
+        setUp();
 
     }
-
 
     @Given("User launch Chrome browser")
     public void user_launch_chrome_browser() {
